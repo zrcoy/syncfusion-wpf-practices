@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net7.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<StartupObject>syncfusion_wpf_app_datagrid.App</StartupObject>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<GenerateAssemblyInfo>True</GenerateAssemblyInfo>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="App.ico" />
+		<None Remove="log4net.config" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="App.ico" />
+		<Content Include="log4net.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+
+		<PackageReference Include="log4net" Version="2.0.15" />
+
+		<PackageReference Include="Syncfusion.Shared.WPF" Version="20.4.0.38" />
+		<PackageReference Include="Syncfusion.Tools.WPF" Version="20.4.0.38" />
+		<PackageReference Include="Syncfusion.Data.WPF" Version="20.4.0.38" />
+		<PackageReference Include="Syncfusion.SfGrid.WPF" Version="20.4.0.38" />
+		<PackageReference Include="Syncfusion.SfChart.WPF" Version="20.4.0.38" />
+		<PackageReference Include="Syncfusion.SfDiagram.WPF" Version="20.4.0.38" />
+		<PackageReference Include="Syncfusion.Themes.Windows11Dark.Wpf" Version="20.4.0.38" />
+		<PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="20.4.0.38" />
+		<PackageReference Include="syncfusion.ui.wpf.net" Version="20.4.0.38" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Project_Readme.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="App.ico" />
+	</ItemGroup>
+
+</Project>
